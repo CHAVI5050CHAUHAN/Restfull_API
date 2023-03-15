@@ -17,6 +17,8 @@ export const getAllBlogs = async(req, res,next)=> {
     return res.status(200).json({blogs});
 };
 
+
+// Add
 export const addBlog = async (req,res) => {
     const {name,email, birth,discription,address,creation_date} = req.body;
 
@@ -40,7 +42,7 @@ export const addBlog = async (req,res) => {
     };
    
 
-    //Udate blog
+    //Udate 
     export const updateBlog = async (req,res,next) =>{
         const{email,address} = req.body;
         const blogId = req.params.id;
@@ -60,7 +62,7 @@ export const addBlog = async (req,res) => {
 };
 
 
-//GetId
+//Get
 export const getById = async (req,res) => {
     const id = req.params.id;
     let blog;
@@ -76,7 +78,7 @@ export const getById = async (req,res) => {
 };
 
 
-//delete blog
+//delete
 export const deleteBlog = async(req,res) => {
     const id = req.params.id;
 

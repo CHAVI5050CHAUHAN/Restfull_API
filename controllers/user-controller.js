@@ -52,29 +52,3 @@ export const add = async (req,res) => {
     return res.status(201).json({user});
 
 };
-
-
-
-// Login controller
-
-// export const login = async (req,res,next) => {
-//     const { email, password } = req.body;    //No need of name
-
-//     // for existing user
-//     let existingUser;
-//     try{
-//         existingUser = await User.findOne({email});
-//     }catch(err){
-//        return console.log(err);
-//     }
-//     if(!existingUser) {
-//         return res
-//         .status(404)
-//         .json({ message: "Could not Find any User By this Email" });
-//     }
-//     const isPasswordCorrect = bcrypt.compareSync(password,existingUser.password);
-//     if(!isPasswordCorrect){
-//         return res.satatus(400).json({nessage:"Icorrect Password"});
-//     }
-//     return res.status(200).json({message:"Login Successfull"});
-// };
